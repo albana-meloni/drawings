@@ -3,10 +3,12 @@
   --white: #FFFFFF;
 }
 body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-sizing: border-box;
   color: var(--white);
   background-color: var(--black);
   min-height: 100vh;
@@ -149,4 +151,16 @@ html::-webkit-scrollbar {
 #top-left::before {
   top: -11px;
   left: 5px;
+}
+
+
+#bottom-links {
+  font-family: system-ui;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0.5rem;
 }

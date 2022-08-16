@@ -1,0 +1,152 @@
+:root {
+  --black: #000000;
+  --white: #FFFFFF;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  color: var(--white);
+  background-color: var(--black);
+  min-height: 100vh;
+}
+a {
+  color: var(--white);
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+.white {
+  background-color: var(--white);
+}
+.black {
+  background-color: var(--black);
+}
+
+.main {
+  width: 150px;
+  height: 97px;
+  border: 10px solid var(--black);
+  border-radius: 100vw;
+  position: relative;
+}
+
+.eye {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 50px;
+  border-radius: 100%;
+}
+#eye-left {
+  top: 25px;
+  left: 25px;
+  transform: rotate(60deg);
+}
+#eye-right {
+  top: 25px;
+  left: 85px;
+  transform: rotate(-60deg);
+}
+
+.tooth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -30px;
+  left: 30%;
+  z-index: -1;
+}
+.teeth {
+  width: 15px;
+  height: 30px;
+  margin: 0 2px;
+}
+
+.bone {
+  width: 22px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+.bone::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--white);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+.bone::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--white);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+#top-right {
+  top: -10px;
+  right: -10px;
+  transform: rotate(45deg);
+}
+#top-right::after {
+  top: -13px;
+  left: -10px;
+}
+#top-right::before {
+  top: -13px;
+  left: 5px;
+}
+
+#bottom-right {
+  top: 75px;
+  right: -10px;
+  transform: rotate(-45deg);
+}
+#bottom-right::after {
+  top: 23px;
+  left: -10px;
+}
+#bottom-right::before {
+  top: 23px;
+  left: 5px;
+}
+
+#bottom-left {
+  top: 75px;
+  right: 140px;
+  transform: rotate(45deg);
+}
+#bottom-left::after {
+  top: 23px;
+  left: -10px;
+}
+#bottom-left::before {
+  top: 23px;
+  left: 5px;
+}
+
+#top-left {
+  top: -10px;
+  right: 140px;
+  transform: rotate(-45deg);
+}
+#top-left::after {
+  top: -10px;
+  left: -10px;
+}
+#top-left::before {
+  top: -11px;
+  left: 5px;
+}

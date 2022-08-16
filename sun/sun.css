@@ -1,0 +1,54 @@
+:root {
+  --red: #D25B70;
+  --blue: #6CB3A9;
+  --yellow: #F6DF96;
+}
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.sky {
+  background-color: var(--red);
+  width: 100vw;
+  height: 50vh;
+  position: absolute;
+  top: 0;
+}
+.water {
+  background-color: var(--blue);
+  width: 100vw;
+  height: 50vh;
+  position: absolute;
+  bottom: 0;
+}
+
+.sun {
+  background-color: var(--yellow);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  z-index: 10;
+  overflow: hidden;
+  position: relative;
+}
+
+.water-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100vw;
+  height: 15px;
+  background-color: var(--blue);
+  z-index: 999;
+
+  box-shadow: 0px 10px 0px var(--yellow),
+    0px 25px 0px var(--blue),
+    0px 35px 0px var(--yellow),
+    0px 50px 0px var(--blue),
+    0px 60px 0px var(--yellow),
+    0px 75px 0px var(--blue);
+}
